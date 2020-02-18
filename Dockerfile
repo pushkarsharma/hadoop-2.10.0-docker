@@ -14,7 +14,7 @@ RUN mkdir -p /var/lock/apache2 /var/run/apache2 /var/run/sshd /var/log/superviso
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 EXPOSE 22 80
 
-# Hadoop Configuration
+# Hadoop Setup
 ADD https://archive.apache.org/dist/hadoop/common/hadoop-2.10.0/hadoop-2.10.0.tar.gz /usr/local/
 RUN tar -C /usr/local/ -xvf /usr/local/hadoop-2.10.0.tar.gz
 RUN mv /usr/local/hadoop-2.10.0/ /usr/local/hadoop/
@@ -29,6 +29,9 @@ ENV HADOOP_HDFS_HOME=$HADOOP_INSTALL
 ENV YARN_HOME=$HADOOP_INSTALL
 ENV HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_INSTALL/lib/native
 ENV HADOOP_OPTS="-Djava.library.path=$HADOOP_INSTALL/lib"
+
+# Hadoop Configurations
+COPY hadoop-configurations/* /usr/local/hadoop/etc/hadoop/
 
 # Start SSH service
 CMD ["/usr/bin/supervisord"]
