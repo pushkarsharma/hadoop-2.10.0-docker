@@ -17,17 +17,17 @@
 <!-- Site specific YARN configuration properties -->
 	<property>
                 <name>yarn.resourcemanager.resource-tracker.address</name>
-                <value>10.254.0.3:8025</value>
+                <value>10.254.1.16:8025</value>
         </property>
 
         <property>
                 <name>yarn.resourcemanager.scheduler.address</name>
-                <value>10.254.0.3:8030</value>
+                <value>10.254.1.16:8030</value>
         </property>
 
         <property>
                 <name>yarn.resourcemanager.address</name>
-                <value>10.254.0.3:8050</value>
+                <value>10.254.1.16:8050</value>
         </property>
 
         <property>

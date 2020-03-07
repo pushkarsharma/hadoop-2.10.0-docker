@@ -19,6 +19,6 @@
 <configuration>
         <property>
                 <name>fs.defaultFS</name>
-                <value>hdfs://10.254.0.3:8020</value>
+                <value>hdfs://10.254.1.16:8020</value>
         </property>
 </configuration>
