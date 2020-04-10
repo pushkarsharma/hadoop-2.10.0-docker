@@ -10,9 +10,9 @@ RUN apt-get update && apt-get install -y \
 	openjdk-8-jdk 
 
 # SSH Configuration
-RUN mkdir -p /var/lock/apache2 /var/run/apache2 /var/run/sshd /var/log/supervisor
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-EXPOSE 22 80
+#RUN mkdir -p /var/lock/apache2 /var/run/apache2 /var/run/sshd /var/log/supervisor
+#COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+#EXPOSE 22 80
 
 # Hadoop Setup
 ADD https://archive.apache.org/dist/hadoop/common/hadoop-2.10.0/hadoop-2.10.0.tar.gz /usr/local/
@@ -34,4 +34,4 @@ ENV HADOOP_OPTS="-Djava.library.path=$HADOOP_INSTALL/lib"
 COPY hadoop-configurations/* /usr/local/hadoop/etc/hadoop/
 
 # Start SSH service
-CMD ["/usr/bin/supervisord"]
+#CMD ["/usr/bin/supervisord"]
