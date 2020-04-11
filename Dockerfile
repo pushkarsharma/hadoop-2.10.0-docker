@@ -34,4 +34,4 @@ ENV HADOOP_OPTS="-Djava.library.path=$HADOOP_INSTALL/lib"
 COPY hadoop-configurations/* /usr/local/hadoop/etc/hadoop/
 
 # Start SSH service
-#CMD ["/usr/bin/supervisord"]
+CMD ["/usr/bin/vi", "empty.txt"]
