@@ -4,7 +4,7 @@ Ubuntu-xenial base with hadoop-2.10.0, ssh, jdk8, ping, vim packages.
 
 <h2>Configuration</h2>
 
-These are sloppy commands. Check the DevOps folder in Onedrive for video guidance.
+These are sloppy commands. Check the DevOps folder in OneDrive for detailed guidance.
 
 1. Update the `core-site.xml` & `yarn-site.xml` configuration files with the IP of the Master node.
 2. Update the slaves file configuration with the IP of the slave.
